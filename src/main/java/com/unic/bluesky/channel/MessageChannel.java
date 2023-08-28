@@ -1,6 +1,6 @@
-package com.unic.bluesky.service;
+package com.unic.bluesky.channel;
 
-import com.unic.bluesky.vo.Message;
+import com.unic.bluesky.channel.vo.Message;
 
 public interface MessageChannel {
 
