@@ -9,11 +9,12 @@ public class RedisService {
     @Autowired
     private RedisTemplate redisTemplate;
 
-    public Object get(String key) {
-        return redisTemplate.opsForValue().get(key);
+
+    public String get(String key) {
+        return redisTemplate.opsForValue().get(key).toString();
     }
 
-    public void set(String key, Object value, long ttl) {
+    public void set(String key, String value, long ttl) {
         redisTemplate.opsForValue().set(key, value, ttl);
     }
 }
