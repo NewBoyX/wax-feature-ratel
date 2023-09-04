@@ -4,6 +4,8 @@
 package com.unic.bluesky.controller;
 
 import com.unic.bluesky.service.RedisService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping(value = "/index")
+@Api(tags = "User API")
 public class IndexController {
 
     private static final Logger logger = LoggerFactory.getLogger(IndexController.class);
@@ -25,7 +28,7 @@ public class IndexController {
     @Autowired
     private RedisService redisService;
 
-
+    @ApiOperation("Get user by ID")
     @GetMapping
     public String index() {
         logger.info("hello");
