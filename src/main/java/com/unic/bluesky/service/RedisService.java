@@ -9,7 +9,6 @@ public class RedisService {
     @Autowired
     private RedisTemplate redisTemplate;
 
-
     public String get(String key) {
         return redisTemplate.opsForValue().get(key).toString();
     }
