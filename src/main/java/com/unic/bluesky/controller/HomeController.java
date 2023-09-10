@@ -37,4 +37,15 @@ public class HomeController {
         return null;
     }
 
+    /**
+     * 获取游戏配置信息
+     * @return
+     */
+    @ApiOperation("获取游戏配置信息")
+    @PostMapping
+    public HomeDataVo getGameProfile() {
+        logger.info("getGameProfile");
+        return null;
+    }
+
 }
