@@ -5,7 +5,7 @@ import lombok.Data;
 import java.util.List;
 
 @Data
-public class Card {
+public class CardVo {
 
     private String userId;
     /**
