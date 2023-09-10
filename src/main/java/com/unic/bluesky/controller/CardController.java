@@ -27,25 +27,25 @@ public class CardController {
     private RedisService redisService;
 
     @ApiOperation("牌桌信息")
-    @PostMapping
+    @PostMapping("cards")
     public TableVo cards(@RequestBody String roomId) {
         return null;
     }
 
     @ApiOperation("抢地主")
-    @PostMapping
+    @PostMapping("landlord")
     public void landlord(@RequestBody String roomId) {
 
     }
 
     @ApiOperation("开局")
-    @PostMapping
+    @PostMapping("start")
     public void start(@RequestBody String roomId) {
 
     }
 
     @ApiOperation("挂机")
-    @PostMapping
+    @PostMapping("idle")
     public void idle(@RequestBody String roomId) {
 
     }

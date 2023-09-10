@@ -30,25 +30,25 @@ public class RoomController {
     private RedisService redisService;
 
     @ApiOperation("创建房间")
-    @PostMapping
+    @PostMapping("createRoom")
     public RoomVo createRoom() {
         return null;
     }
 
     @ApiOperation("房间列表")
-    @PostMapping
+    @PostMapping("listRoom")
     public List<RoomVo> listRoom() {
         return null;
     }
 
     @ApiOperation("房间信息")
-    @PostMapping
+    @PostMapping("detail")
     public RoomVo detail(String roomId) {
         return null;
     }
 
     @ApiOperation("房间成员信息")
-    @PostMapping
+    @PostMapping("members")
     public List<UserVo> members(String roomId) {
         return null;
     }
