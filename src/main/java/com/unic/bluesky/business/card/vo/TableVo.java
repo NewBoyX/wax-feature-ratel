@@ -1,6 +1,5 @@
 package com.unic.bluesky.business.card.vo;
 
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import io.swagger.annotations.ApiOperation;
 import lombok.Data;
@@ -35,10 +34,14 @@ public class TableVo {
 
     @ApiModelProperty("坐席信息")
     private List<Representative> representatives;
-    @ApiModelProperty("牌桌版本")
-    private long version;
+    @ApiModelProperty("最新出牌时间")
+    private long pubTime;
     @ApiModelProperty("牌桌状态")
     private int status;
+    @ApiModelProperty("上一个出牌人ID")
+    private String prevUser;
+    @ApiModelProperty("当前出牌人ID")
+    private String currentUser;
 
 
 }
