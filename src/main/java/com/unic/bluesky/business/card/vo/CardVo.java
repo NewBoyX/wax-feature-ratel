@@ -1,24 +1,13 @@
 package com.unic.bluesky.business.card.vo;
 
+import io.swagger.annotations.ApiOperation;
 import lombok.Data;
 
 import java.util.List;
 
 @Data
+@ApiOperation("牌信息")
 public class CardVo {
 
-    private String userId;
-    /**
-     * 出牌时间
-     */
-    private Long pubTime;
-    /**
-     * 最后一次出牌
-     */
-    private List<String> latest;
-    /**
-     * 手上剩余的牌
-     */
-    private List<String> remains;
 
 }

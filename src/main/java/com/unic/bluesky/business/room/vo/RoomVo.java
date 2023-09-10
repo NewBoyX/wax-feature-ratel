@@ -1,8 +1,10 @@
 package com.unic.bluesky.business.room.vo;
 
+import io.swagger.annotations.ApiOperation;
 import lombok.Data;
 
 @Data
+@ApiOperation("房间信息")
 public class RoomVo {
     /**
      * 房间id
