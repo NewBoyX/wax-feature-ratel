@@ -32,14 +32,14 @@ public class UserController {
     private RedisService redisService;
 
     @ApiOperation("获取用户数据")
-    @PostMapping
+    @PostMapping("getUserProfile")
     public UserVo getUserProfile() {
         logger.info("getUserProfile");
         return null;
     }
 
     @ApiOperation("获取用户排行数据")
-    @PostMapping
+    @PostMapping("getRankData")
     public UserVo getRankData() {
         logger.info("getRankData");
         return null;
