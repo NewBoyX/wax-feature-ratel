@@ -12,6 +12,11 @@ public class UserVo {
     private String userId;
 
     /**
+     * 用户名
+     */
+    private String userName;
+
+    /**
      * 用户头像
      */
     private String avatorUrl;
