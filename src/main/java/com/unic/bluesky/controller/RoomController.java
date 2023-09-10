@@ -18,11 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-/**
- * spring-boot-demo-5-1
- *
- * @author wujing
- */
+
 @RestController
 @RequestMapping(value = "/room")
 @Api(tags = "Room API")
