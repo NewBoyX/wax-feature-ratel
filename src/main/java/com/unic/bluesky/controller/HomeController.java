@@ -3,6 +3,7 @@
  */
 package com.unic.bluesky.controller;
 
+import com.unic.bluesky.business.home.vo.HomeDataVo;
 import com.unic.bluesky.service.RedisService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -10,30 +11,30 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * spring-boot-demo-5-1
+ * 首页接口
  *
- * @author wujing
+ * @author kuloud
  */
 @RestController
-@RequestMapping(value = "/index")
-@Api(tags = "User API")
-public class IndexController {
+@RequestMapping(value = "/home")
+@Api(tags = "Home API")
+public class HomeController {
 
-    private static final Logger logger = LoggerFactory.getLogger(IndexController.class);
+    private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 
     @Autowired
     private RedisService redisService;
 
-    @ApiOperation("Get user by ID")
-    @GetMapping
-    public String index() {
-        logger.info("hello");
-        return "hello";
+    @ApiOperation("获取首页数据（等级、积分、青果）")
+    @PostMapping
+    public HomeDataVo getTaskCenterData() {
+        logger.info("getTaskCenterData");
+        return null;
     }
-
 
 }

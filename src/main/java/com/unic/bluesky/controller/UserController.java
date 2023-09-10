@@ -3,6 +3,7 @@
  */
 package com.unic.bluesky.controller;
 
+import com.unic.bluesky.business.home.vo.HomeDataVo;
 import com.unic.bluesky.business.user.vo.UserVo;
 import com.unic.bluesky.service.RedisService;
 import io.swagger.annotations.Api;
@@ -30,6 +31,17 @@ public class UserController {
     @Autowired
     private RedisService redisService;
 
+    @ApiOperation("获取用户数据")
+    @PostMapping
+    public UserVo getUserProfile() {
+        logger.info("getUserProfile");
+        return null;
+    }
 
-
+    @ApiOperation("获取用户排行数据")
+    @PostMapping
+    public UserVo getRankData() {
+        logger.info("getRankData");
+        return null;
+    }
 }
