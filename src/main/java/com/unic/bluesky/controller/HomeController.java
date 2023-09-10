@@ -31,7 +31,7 @@ public class HomeController {
     private RedisService redisService;
 
     @ApiOperation("获取首页数据（等级、积分、青果）")
-    @PostMapping
+    @PostMapping("getTaskCenterData")
     public HomeDataVo getTaskCenterData() {
         logger.info("getTaskCenterData");
         return null;
@@ -42,7 +42,7 @@ public class HomeController {
      * @return
      */
     @ApiOperation("获取游戏配置信息")
-    @PostMapping
+    @PostMapping("getGameProfile")
     public HomeDataVo getGameProfile() {
         logger.info("getGameProfile");
         return null;

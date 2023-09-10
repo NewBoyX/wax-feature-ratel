@@ -4,6 +4,7 @@
 package com.unic.bluesky.controller;
 
 import com.unic.bluesky.business.home.vo.HomeDataVo;
+import com.unic.bluesky.business.user.RankRequest;
 import com.unic.bluesky.business.user.vo.UserVo;
 import com.unic.bluesky.service.RedisService;
 import io.swagger.annotations.Api;
@@ -13,6 +14,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -40,7 +42,7 @@ public class UserController {
 
     @ApiOperation("获取用户排行数据")
     @PostMapping("getRankData")
-    public UserVo getRankData() {
+    public UserVo getRankData(@RequestBody RankRequest request) {
         logger.info("getRankData");
         return null;
     }
